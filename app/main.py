@@ -19,11 +19,11 @@ def chat(user_message: UserMessage):
     if not API_KEY:
         raise HTTPException(status_code=500, detail="API key not found. Set it in .env file.")
 
-    # 🔹 Retrieve relevant medical context
+    # Retrieve relevant medical context
     context = retrieve_context(user_message.message)
     context_text = "\n".join(context)
 
-    # 🔹 Inject context into prompt
+    # Inject context into prompt
     augmented_prompt = f"""
     You are a medical assistant. Use the following medical knowledge if helpful:
     {context_text}
