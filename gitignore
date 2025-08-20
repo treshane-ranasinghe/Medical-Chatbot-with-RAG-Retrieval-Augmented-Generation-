@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pycache/
+*.pdb
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Ignore large dataset
+app/data/medical_symptoms.csv
+
+# Virtual environment
+venv/
+ENV/
+env/
+.env/
+
+# IDEs / editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Pytest / coverage
+.coverage
+htmlcov/
+.pytest_cache/
