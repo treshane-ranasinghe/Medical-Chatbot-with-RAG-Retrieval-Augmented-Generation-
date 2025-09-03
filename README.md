@@ -137,28 +137,3 @@ uvicorn app.main:app --reload
 
 * **Send → Response** will include `reply` + `context_used`.
 
----
-
-## ⚠️ Troubleshooting
-
-* **RAG not working:** Ensure FAISS and sentence embeddings are loaded correctly.
-* **Duplicates in context:** Convert retrieved chunks to `set()` in `retrieve_context()`.
-* **Internal Server Error (500):** Verify `.env` has a valid API key and server is running.
-* **Postman request errors:** Make sure POST method is used with valid JSON payload.
-
----
-
-## 📦 GitHub Large File Warning
-
-The dataset `medical_symptoms.csv` exceeds GitHub's 100MB file size limit.
-
-* **Do not commit large CSV files directly.**
-* Use **Git LFS** if storing large datasets: [https://git-lfs.github.com](https://git-lfs.github.com)
-
-Add `.env` and large datasets to `.gitignore`:
-
-```gitignore
-.env
-app/data/medical_symptoms.csv
-```
-
